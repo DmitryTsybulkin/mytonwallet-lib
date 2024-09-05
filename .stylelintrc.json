@@ -1,0 +1,52 @@
+{
+  "extends": [
+    "stylelint-config-clean-order"
+  ],
+  "ignoreFiles": [
+    "coverage/**"
+  ],
+  "plugins": [
+    "stylelint-declaration-block-no-ignored-properties",
+    "stylelint-high-performance-animation",
+    "stylelint-group-selectors",
+    "stylelint-order"
+  ],
+  "rules": {
+    "number-leading-zero": "always",
+    "selector-attribute-quotes": "always",
+    "no-descending-specificity": null,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": [
+          "global"
+        ]
+      }
+    ],
+    "plugin/declaration-block-no-ignored-properties": true,
+    "plugin/no-low-performance-animation-properties": [
+      true,
+      {
+        "ignore": "paint-properties"
+      }
+    ],
+    "plugin/stylelint-group-selectors": [
+      true,
+      {
+        "severity": "warning"
+      }
+    ],
+    "order/order": [
+      {
+        "type": "at-rule",
+        "name": "import",
+        "hasBlock": false
+      }
+    ],
+    "at-rule-empty-line-before": ["always", {
+      "ignore": [
+        "first-nested"
+      ]
+    }]
+  }
+}
